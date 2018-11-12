@@ -1,0 +1,511 @@
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.SystemClockInit) refers to cmu.o(i.SwitchTo_Fpll) for SwitchTo_Fpll
+    main.o(i.SystemClockInit) refers to cmu.o(i.Close_Hrc) for Close_Hrc
+    main.o(i.main) refers to flash.o(i.HT_Flash_ByteRead) for HT_Flash_ByteRead
+    main.o(i.main) refers to uread4.o(.text) for __aeabi_uread4
+    main.o(i.main) refers to update.o(i.UpdateFromAppBkp) for UpdateFromAppBkp
+    main.o(i.main) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    main.o(i.main) refers to update.o(.data) for updateInfo
+    update.o(i.UpdateFromAppBkp) refers to update.o(i.Upgrade_FlashCheck) for Upgrade_FlashCheck
+    update.o(i.UpdateFromAppBkp) refers to flash.o(i.HT_Flash_PageErase) for HT_Flash_PageErase
+    update.o(i.UpdateFromAppBkp) refers to memcpya.o(.text) for __aeabi_memcpy
+    update.o(i.UpdateFromAppBkp) refers to flash.o(i.HT_Flash_ByteWrite) for HT_Flash_ByteWrite
+    update.o(i.UpdateFromAppBkp) refers to flash.o(i.HT_Flash_ByteRead) for HT_Flash_ByteRead
+    update.o(i.UpdateFromAppBkp) refers to update.o(.bss) for .bss
+    update.o(i.Upgrade_FlashCheck) refers to flash.o(i.HT_Flash_ByteRead) for HT_Flash_ByteRead
+    update.o(i.Upgrade_FlashCheck) refers to uread4.o(.text) for __aeabi_uread4
+    update.o(i.Upgrade_FlashCheck) refers to update.o(.data) for .data
+    ht60xx_it.o(i.AES_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.DMA_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI0_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI1_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI2_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI3_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI4_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI5_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI6_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI7_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI8_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.EXTI9_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.HardFault_Handler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.I2C_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.NMI_Handler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.PMU_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.PendSV_Handler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.RTC_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.SPI0_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.SPI1_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.SVC_Handler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.SelfTestF_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.SysTick_Handler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TBS_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TIMER_0_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TIMER_1_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TIMER_2_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TIMER_3_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TIMER_4_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.TIMER_5_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART0_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART1_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART2_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART3_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART4_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART5_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    ht60xx_it.o(i.UART6_IRQHandler) refers to flash.o(i.HT_Flash_WordRead) for HT_Flash_WordRead
+    cmu.o(i.Close_Hrc) refers to cmu.o(.constdata) for .constdata
+    cmu.o(i.Close_Pll) refers to cmu.o(.constdata) for .constdata
+    cmu.o(i.HT_CMU_ClkCtrl0Config) refers to cmu.o(.constdata) for .constdata
+    cmu.o(i.HT_CMU_ClkCtrl1Config) refers to cmu.o(.constdata) for .constdata
+    cmu.o(i.SwitchTo_Fhrc) refers to cmu.o(.constdata) for .constdata
+    cmu.o(i.SwitchTo_Flf) refers to cmu.o(.constdata) for .constdata
+    cmu.o(i.SwitchTo_Fpll) refers to cpucfg.o(i.delay_ms) for delay_ms
+    flash.o(i.HT_Flash_ByteWrite) refers to flash.o(.constdata) for .constdata
+    flash.o(i.HT_Flash_ChipErase) refers to flash.o(.constdata) for .constdata
+    flash.o(i.HT_Flash_HalfWordWrite) refers to flash.o(.constdata) for .constdata
+    flash.o(i.HT_Flash_PageErase) refers to flash.o(.constdata) for .constdata
+    flash.o(i.HT_Flash_WordWrite) refers to flash.o(.constdata) for .constdata
+    startup_ht502x.o(RESET) refers to startup_ht502x.o(STACK) for __initial_sp
+    startup_ht502x.o(RESET) refers to startup_ht502x.o(.text) for Reset_Handler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.NMI_Handler) for NMI_Handler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.SVC_Handler) for SVC_Handler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.PMU_IRQHandler) for PMU_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.AES_IRQHandler) for AES_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI0_IRQHandler) for EXTI0_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI1_IRQHandler) for EXTI1_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI2_IRQHandler) for EXTI2_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI3_IRQHandler) for EXTI3_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI4_IRQHandler) for EXTI4_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI5_IRQHandler) for EXTI5_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI6_IRQHandler) for EXTI6_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.UART0_IRQHandler) for UART0_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.UART1_IRQHandler) for UART1_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.UART2_IRQHandler) for UART2_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.UART3_IRQHandler) for UART3_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.UART4_IRQHandler) for UART4_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.UART5_IRQHandler) for UART5_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.TIMER_0_IRQHandler) for TIMER_0_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.TIMER_1_IRQHandler) for TIMER_1_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.TIMER_2_IRQHandler) for TIMER_2_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.TIMER_3_IRQHandler) for TIMER_3_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.TBS_IRQHandler) for TBS_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.RTC_IRQHandler) for RTC_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.I2C_IRQHandler) for I2C_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.SPI0_IRQHandler) for SPI0_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.SelfTestF_IRQHandler) for SelfTestF_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.DMA_IRQHandler) for DMA_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI7_IRQHandler) for EXTI7_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI8_IRQHandler) for EXTI8_IRQHandler
+    startup_ht502x.o(RESET) refers to ht60xx_it.o(i.EXTI9_IRQHandler) for EXTI9_IRQHandler
+    startup_ht502x.o(.text) refers to system_ht6xxx.o(i.SystemInit) for SystemInit
+    startup_ht502x.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_ht502x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_ht502x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.emb_text), (8 bytes).
+    Removing main.o(i.SystemClockInit), (56 bytes).
+    Removing update.o(.emb_text), (8 bytes).
+    Removing ht60xx_it.o(.emb_text), (8 bytes).
+    Removing ht60xx_it.o(i.SPI1_IRQHandler), (24 bytes).
+    Removing ht60xx_it.o(i.TIMER_4_IRQHandler), (24 bytes).
+    Removing ht60xx_it.o(i.TIMER_5_IRQHandler), (24 bytes).
+    Removing ht60xx_it.o(i.UART6_IRQHandler), (24 bytes).
+    Removing cpucfg.o(.emb_text), (8 bytes).
+    Removing cpucfg.o(i.delay_ms), (36 bytes).
+    Removing cmu.o(.emb_text), (8 bytes).
+    Removing cmu.o(i.Close_Hrc), (44 bytes).
+    Removing cmu.o(i.Close_Pll), (44 bytes).
+    Removing cmu.o(i.HT_CMU_ClkCtrl0Config), (56 bytes).
+    Removing cmu.o(i.HT_CMU_ClkCtrl1Config), (56 bytes).
+    Removing cmu.o(i.SwitchTo_Fhrc), (48 bytes).
+    Removing cmu.o(i.SwitchTo_Flf), (40 bytes).
+    Removing cmu.o(i.SwitchTo_Fpll), (40 bytes).
+    Removing cmu.o(.constdata), (8 bytes).
+    Removing systick.o(.emb_text), (8 bytes).
+    Removing systick.o(i.SysTick_Init), (44 bytes).
+    Removing flash.o(.emb_text), (8 bytes).
+    Removing flash.o(i.HT_Flash_ChipErase), (64 bytes).
+    Removing flash.o(i.HT_Flash_HalfWordRead), (36 bytes).
+    Removing flash.o(i.HT_Flash_HalfWordWrite), (80 bytes).
+    Removing flash.o(i.HT_Flash_WordWrite), (80 bytes).
+    Removing system_ht6xxx.o(.emb_text), (8 bytes).
+    Removing startup_ht502x.o(HEAP), (0 bytes).
+
+28 unused section(s) (total 892 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_ht502x.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/unhosted.c              0x00000000   Number         0  uread4.o ABSOLUTE
+    Driver\\cmu.c                            0x00000000   Number         0  cmu.o ABSOLUTE
+    Driver\\flash.c                          0x00000000   Number         0  flash.o ABSOLUTE
+    Driver\\systick.c                        0x00000000   Number         0  systick.o ABSOLUTE
+    Driver\cmu.c                             0x00000000   Number         0  cmu.o ABSOLUTE
+    Driver\flash.c                           0x00000000   Number         0  flash.o ABSOLUTE
+    Driver\systick.c                         0x00000000   Number         0  systick.o ABSOLUTE
+    Libraries\CMSIS\CoreSupport\core_cm0.c   0x00000000   Number         0  core_cm0.o ABSOLUTE
+    Libraries\CMSIS\DeviceSupport\system_ht6xxx.c 0x00000000   Number         0  system_ht6xxx.o ABSOLUTE
+    Libraries\Startup\startup_ht502x.s       0x00000000   Number         0  startup_ht502x.o ABSOLUTE
+    Libraries\\CMSIS\\DeviceSupport\\system_ht6xxx.c 0x00000000   Number         0  system_ht6xxx.o ABSOLUTE
+    Main\CpuCfg.c                            0x00000000   Number         0  cpucfg.o ABSOLUTE
+    Main\\CpuCfg.c                           0x00000000   Number         0  cpucfg.o ABSOLUTE
+    Main\\ht60xx_it.c                        0x00000000   Number         0  ht60xx_it.o ABSOLUTE
+    Main\\main.c                             0x00000000   Number         0  main.o ABSOLUTE
+    Main\\update.c                           0x00000000   Number         0  update.o ABSOLUTE
+    Main\ht60xx_it.c                         0x00000000   Number         0  ht60xx_it.o ABSOLUTE
+    Main\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    Main\update.c                            0x00000000   Number         0  update.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d4   Section       28  startup_ht502x.o(.text)
+    Reserved_IRQHandler                      0x000000e7   Thumb Code     0  startup_ht502x.o(.text)
+    .text                                    0x000000f0   Section        0  memcpya.o(.text)
+    .text                                    0x00000114   Section        0  uread4.o(.text)
+    .text                                    0x00000128   Section       36  init.o(.text)
+    i.AES_IRQHandler                         0x0000014c   Section        0  ht60xx_it.o(i.AES_IRQHandler)
+    i.DMA_IRQHandler                         0x00000164   Section        0  ht60xx_it.o(i.DMA_IRQHandler)
+    i.EXTI0_IRQHandler                       0x0000017c   Section        0  ht60xx_it.o(i.EXTI0_IRQHandler)
+    i.EXTI1_IRQHandler                       0x00000194   Section        0  ht60xx_it.o(i.EXTI1_IRQHandler)
+    i.EXTI2_IRQHandler                       0x000001ac   Section        0  ht60xx_it.o(i.EXTI2_IRQHandler)
+    i.EXTI3_IRQHandler                       0x000001c4   Section        0  ht60xx_it.o(i.EXTI3_IRQHandler)
+    i.EXTI4_IRQHandler                       0x000001dc   Section        0  ht60xx_it.o(i.EXTI4_IRQHandler)
+    i.EXTI5_IRQHandler                       0x000001f4   Section        0  ht60xx_it.o(i.EXTI5_IRQHandler)
+    i.EXTI6_IRQHandler                       0x0000020c   Section        0  ht60xx_it.o(i.EXTI6_IRQHandler)
+    i.EXTI7_IRQHandler                       0x00000224   Section        0  ht60xx_it.o(i.EXTI7_IRQHandler)
+    i.EXTI8_IRQHandler                       0x0000023c   Section        0  ht60xx_it.o(i.EXTI8_IRQHandler)
+    i.EXTI9_IRQHandler                       0x00000254   Section        0  ht60xx_it.o(i.EXTI9_IRQHandler)
+    i.HT_Flash_ByteRead                      0x0000026c   Section        0  flash.o(i.HT_Flash_ByteRead)
+    i.HT_Flash_ByteWrite                     0x00000294   Section        0  flash.o(i.HT_Flash_ByteWrite)
+    i.HT_Flash_PageErase                     0x000002dc   Section        0  flash.o(i.HT_Flash_PageErase)
+    i.HT_Flash_WordRead                      0x0000031c   Section        0  flash.o(i.HT_Flash_WordRead)
+    i.HardFault_Handler                      0x00000340   Section        0  ht60xx_it.o(i.HardFault_Handler)
+    i.I2C_IRQHandler                         0x00000358   Section        0  ht60xx_it.o(i.I2C_IRQHandler)
+    i.NMI_Handler                            0x00000370   Section        0  ht60xx_it.o(i.NMI_Handler)
+    i.PMU_IRQHandler                         0x00000388   Section        0  ht60xx_it.o(i.PMU_IRQHandler)
+    i.PendSV_Handler                         0x0000039c   Section        0  ht60xx_it.o(i.PendSV_Handler)
+    i.RTC_IRQHandler                         0x000003b4   Section        0  ht60xx_it.o(i.RTC_IRQHandler)
+    i.SPI0_IRQHandler                        0x000003cc   Section        0  ht60xx_it.o(i.SPI0_IRQHandler)
+    i.SVC_Handler                            0x000003e4   Section        0  ht60xx_it.o(i.SVC_Handler)
+    i.SelfTestF_IRQHandler                   0x000003fc   Section        0  ht60xx_it.o(i.SelfTestF_IRQHandler)
+    i.SysTick_Handler                        0x00000414   Section        0  ht60xx_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x0000042c   Section        0  system_ht6xxx.o(i.SystemInit)
+    i.TBS_IRQHandler                         0x00000430   Section        0  ht60xx_it.o(i.TBS_IRQHandler)
+    i.TIMER_0_IRQHandler                     0x00000448   Section        0  ht60xx_it.o(i.TIMER_0_IRQHandler)
+    i.TIMER_1_IRQHandler                     0x00000460   Section        0  ht60xx_it.o(i.TIMER_1_IRQHandler)
+    i.TIMER_2_IRQHandler                     0x00000474   Section        0  ht60xx_it.o(i.TIMER_2_IRQHandler)
+    i.TIMER_3_IRQHandler                     0x0000048c   Section        0  ht60xx_it.o(i.TIMER_3_IRQHandler)
+    i.UART0_IRQHandler                       0x000004a4   Section        0  ht60xx_it.o(i.UART0_IRQHandler)
+    i.UART1_IRQHandler                       0x000004bc   Section        0  ht60xx_it.o(i.UART1_IRQHandler)
+    i.UART2_IRQHandler                       0x000004d4   Section        0  ht60xx_it.o(i.UART2_IRQHandler)
+    i.UART3_IRQHandler                       0x000004ec   Section        0  ht60xx_it.o(i.UART3_IRQHandler)
+    i.UART4_IRQHandler                       0x00000504   Section        0  ht60xx_it.o(i.UART4_IRQHandler)
+    i.UART5_IRQHandler                       0x0000051c   Section        0  ht60xx_it.o(i.UART5_IRQHandler)
+    i.UpdateFromAppBkp                       0x00000534   Section        0  update.o(i.UpdateFromAppBkp)
+    i.Upgrade_FlashCheck                     0x000005e8   Section        0  update.o(i.Upgrade_FlashCheck)
+    i.__scatterload_copy                     0x00000634   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000642   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000644   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x00000654   Section        0  main.o(i.main)
+    .constdata                               0x000006b8   Section        8  flash.o(.constdata)
+    RegisterWriteProtect                     0x000006b8   Data           8  flash.o(.constdata)
+    .ARM.__at_0x0FC0                         0x00000fc0   Section        4  startup_ht502x.o(.ARM.__at_0x0FC0)
+    .data                                    0x20000000   Section        8  update.o(.data)
+    .bss                                     0x20000008   Section     1024  update.o(.bss)
+    STACK                                    0x20000408   Section     4096  startup_ht502x.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_ht502x.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000d5   Thumb Code     8  startup_ht502x.o(.text)
+    EMU_IRQHandler                           0x000000e7   Thumb Code     0  startup_ht502x.o(.text)
+    KEY_IRQHandler                           0x000000e7   Thumb Code     0  startup_ht502x.o(.text)
+    __aeabi_memcpy                           0x000000f1   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x000000f1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x000000f1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_uread4                           0x00000115   Thumb Code    20  uread4.o(.text)
+    __rt_uread4                              0x00000115   Thumb Code     0  uread4.o(.text)
+    _uread4                                  0x00000115   Thumb Code     0  uread4.o(.text)
+    __scatterload                            0x00000129   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000129   Thumb Code     0  init.o(.text)
+    AES_IRQHandler                           0x0000014d   Thumb Code    18  ht60xx_it.o(i.AES_IRQHandler)
+    DMA_IRQHandler                           0x00000165   Thumb Code    18  ht60xx_it.o(i.DMA_IRQHandler)
+    EXTI0_IRQHandler                         0x0000017d   Thumb Code    18  ht60xx_it.o(i.EXTI0_IRQHandler)
+    EXTI1_IRQHandler                         0x00000195   Thumb Code    18  ht60xx_it.o(i.EXTI1_IRQHandler)
+    EXTI2_IRQHandler                         0x000001ad   Thumb Code    18  ht60xx_it.o(i.EXTI2_IRQHandler)
+    EXTI3_IRQHandler                         0x000001c5   Thumb Code    18  ht60xx_it.o(i.EXTI3_IRQHandler)
+    EXTI4_IRQHandler                         0x000001dd   Thumb Code    18  ht60xx_it.o(i.EXTI4_IRQHandler)
+    EXTI5_IRQHandler                         0x000001f5   Thumb Code    18  ht60xx_it.o(i.EXTI5_IRQHandler)
+    EXTI6_IRQHandler                         0x0000020d   Thumb Code    18  ht60xx_it.o(i.EXTI6_IRQHandler)
+    EXTI7_IRQHandler                         0x00000225   Thumb Code    18  ht60xx_it.o(i.EXTI7_IRQHandler)
+    EXTI8_IRQHandler                         0x0000023d   Thumb Code    18  ht60xx_it.o(i.EXTI8_IRQHandler)
+    EXTI9_IRQHandler                         0x00000255   Thumb Code    18  ht60xx_it.o(i.EXTI9_IRQHandler)
+    HT_Flash_ByteRead                        0x0000026d   Thumb Code    28  flash.o(i.HT_Flash_ByteRead)
+    HT_Flash_ByteWrite                       0x00000295   Thumb Code    56  flash.o(i.HT_Flash_ByteWrite)
+    HT_Flash_PageErase                       0x000002dd   Thumb Code    48  flash.o(i.HT_Flash_PageErase)
+    HT_Flash_WordRead                        0x0000031d   Thumb Code    30  flash.o(i.HT_Flash_WordRead)
+    HardFault_Handler                        0x00000341   Thumb Code    18  ht60xx_it.o(i.HardFault_Handler)
+    I2C_IRQHandler                           0x00000359   Thumb Code    18  ht60xx_it.o(i.I2C_IRQHandler)
+    NMI_Handler                              0x00000371   Thumb Code    18  ht60xx_it.o(i.NMI_Handler)
+    PMU_IRQHandler                           0x00000389   Thumb Code    20  ht60xx_it.o(i.PMU_IRQHandler)
+    PendSV_Handler                           0x0000039d   Thumb Code    18  ht60xx_it.o(i.PendSV_Handler)
+    RTC_IRQHandler                           0x000003b5   Thumb Code    18  ht60xx_it.o(i.RTC_IRQHandler)
+    SPI0_IRQHandler                          0x000003cd   Thumb Code    18  ht60xx_it.o(i.SPI0_IRQHandler)
+    SVC_Handler                              0x000003e5   Thumb Code    18  ht60xx_it.o(i.SVC_Handler)
+    SelfTestF_IRQHandler                     0x000003fd   Thumb Code    18  ht60xx_it.o(i.SelfTestF_IRQHandler)
+    SysTick_Handler                          0x00000415   Thumb Code    18  ht60xx_it.o(i.SysTick_Handler)
+    SystemInit                               0x0000042d   Thumb Code     2  system_ht6xxx.o(i.SystemInit)
+    TBS_IRQHandler                           0x00000431   Thumb Code    18  ht60xx_it.o(i.TBS_IRQHandler)
+    TIMER_0_IRQHandler                       0x00000449   Thumb Code    18  ht60xx_it.o(i.TIMER_0_IRQHandler)
+    TIMER_1_IRQHandler                       0x00000461   Thumb Code    20  ht60xx_it.o(i.TIMER_1_IRQHandler)
+    TIMER_2_IRQHandler                       0x00000475   Thumb Code    18  ht60xx_it.o(i.TIMER_2_IRQHandler)
+    TIMER_3_IRQHandler                       0x0000048d   Thumb Code    18  ht60xx_it.o(i.TIMER_3_IRQHandler)
+    UART0_IRQHandler                         0x000004a5   Thumb Code    18  ht60xx_it.o(i.UART0_IRQHandler)
+    UART1_IRQHandler                         0x000004bd   Thumb Code    18  ht60xx_it.o(i.UART1_IRQHandler)
+    UART2_IRQHandler                         0x000004d5   Thumb Code    18  ht60xx_it.o(i.UART2_IRQHandler)
+    UART3_IRQHandler                         0x000004ed   Thumb Code    18  ht60xx_it.o(i.UART3_IRQHandler)
+    UART4_IRQHandler                         0x00000505   Thumb Code    18  ht60xx_it.o(i.UART4_IRQHandler)
+    UART5_IRQHandler                         0x0000051d   Thumb Code    18  ht60xx_it.o(i.UART5_IRQHandler)
+    UpdateFromAppBkp                         0x00000535   Thumb Code   170  update.o(i.UpdateFromAppBkp)
+    Upgrade_FlashCheck                       0x000005e9   Thumb Code    66  update.o(i.Upgrade_FlashCheck)
+    __scatterload_copy                       0x00000635   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000643   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000645   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x00000655   Thumb Code    82  main.o(i.main)
+    Region$$Table$$Base                      0x000006c0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000006e0   Number         0  anon$$obj.o(Region$$Table)
+    updateInfo                               0x20000000   Data           8  update.o(.data)
+    buffer                                   0x20000008   Data        1024  update.o(.bss)
+    __initial_sp                             0x20001408   Data           0  startup_ht502x.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000fcc, Max: 0x00001fff, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00000fc4, Max: 0x00001fff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000c0   Data   RO          534    RESET               startup_ht502x.o
+    0x000000c0   0x00000000   Code   RO          542  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x00000004   Code   RO          551    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x00000004   Code   RO          554    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x00000000   Code   RO          556    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x00000000   Code   RO          558    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x00000008   Code   RO          559    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x00000000   Code   RO          561    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x00000000   Code   RO          563    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x00000004   Code   RO          552    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x0000001c   Code   RO          536    .text               startup_ht502x.o
+    0x000000f0   0x00000024   Code   RO          545    .text               mc_p.l(memcpya.o)
+    0x00000114   0x00000014   Code   RO          549    .text               mc_p.l(uread4.o)
+    0x00000128   0x00000024   Code   RO          565    .text               mc_p.l(init.o)
+    0x0000014c   0x00000018   Code   RO          109    i.AES_IRQHandler    ht60xx_it.o
+    0x00000164   0x00000018   Code   RO          110    i.DMA_IRQHandler    ht60xx_it.o
+    0x0000017c   0x00000018   Code   RO          111    i.EXTI0_IRQHandler  ht60xx_it.o
+    0x00000194   0x00000018   Code   RO          112    i.EXTI1_IRQHandler  ht60xx_it.o
+    0x000001ac   0x00000018   Code   RO          113    i.EXTI2_IRQHandler  ht60xx_it.o
+    0x000001c4   0x00000018   Code   RO          114    i.EXTI3_IRQHandler  ht60xx_it.o
+    0x000001dc   0x00000018   Code   RO          115    i.EXTI4_IRQHandler  ht60xx_it.o
+    0x000001f4   0x00000018   Code   RO          116    i.EXTI5_IRQHandler  ht60xx_it.o
+    0x0000020c   0x00000018   Code   RO          117    i.EXTI6_IRQHandler  ht60xx_it.o
+    0x00000224   0x00000018   Code   RO          118    i.EXTI7_IRQHandler  ht60xx_it.o
+    0x0000023c   0x00000018   Code   RO          119    i.EXTI8_IRQHandler  ht60xx_it.o
+    0x00000254   0x00000018   Code   RO          120    i.EXTI9_IRQHandler  ht60xx_it.o
+    0x0000026c   0x00000028   Code   RO          439    i.HT_Flash_ByteRead  flash.o
+    0x00000294   0x00000048   Code   RO          440    i.HT_Flash_ByteWrite  flash.o
+    0x000002dc   0x00000040   Code   RO          444    i.HT_Flash_PageErase  flash.o
+    0x0000031c   0x00000024   Code   RO          445    i.HT_Flash_WordRead  flash.o
+    0x00000340   0x00000018   Code   RO          121    i.HardFault_Handler  ht60xx_it.o
+    0x00000358   0x00000018   Code   RO          122    i.I2C_IRQHandler    ht60xx_it.o
+    0x00000370   0x00000018   Code   RO          123    i.NMI_Handler       ht60xx_it.o
+    0x00000388   0x00000014   Code   RO          124    i.PMU_IRQHandler    ht60xx_it.o
+    0x0000039c   0x00000018   Code   RO          125    i.PendSV_Handler    ht60xx_it.o
+    0x000003b4   0x00000018   Code   RO          126    i.RTC_IRQHandler    ht60xx_it.o
+    0x000003cc   0x00000018   Code   RO          127    i.SPI0_IRQHandler   ht60xx_it.o
+    0x000003e4   0x00000018   Code   RO          129    i.SVC_Handler       ht60xx_it.o
+    0x000003fc   0x00000018   Code   RO          130    i.SelfTestF_IRQHandler  ht60xx_it.o
+    0x00000414   0x00000018   Code   RO          131    i.SysTick_Handler   ht60xx_it.o
+    0x0000042c   0x00000002   Code   RO          508    i.SystemInit        system_ht6xxx.o
+    0x0000042e   0x00000002   PAD
+    0x00000430   0x00000018   Code   RO          132    i.TBS_IRQHandler    ht60xx_it.o
+    0x00000448   0x00000018   Code   RO          133    i.TIMER_0_IRQHandler  ht60xx_it.o
+    0x00000460   0x00000014   Code   RO          134    i.TIMER_1_IRQHandler  ht60xx_it.o
+    0x00000474   0x00000018   Code   RO          135    i.TIMER_2_IRQHandler  ht60xx_it.o
+    0x0000048c   0x00000018   Code   RO          136    i.TIMER_3_IRQHandler  ht60xx_it.o
+    0x000004a4   0x00000018   Code   RO          139    i.UART0_IRQHandler  ht60xx_it.o
+    0x000004bc   0x00000018   Code   RO          140    i.UART1_IRQHandler  ht60xx_it.o
+    0x000004d4   0x00000018   Code   RO          141    i.UART2_IRQHandler  ht60xx_it.o
+    0x000004ec   0x00000018   Code   RO          142    i.UART3_IRQHandler  ht60xx_it.o
+    0x00000504   0x00000018   Code   RO          143    i.UART4_IRQHandler  ht60xx_it.o
+    0x0000051c   0x00000018   Code   RO          144    i.UART5_IRQHandler  ht60xx_it.o
+    0x00000534   0x000000b4   Code   RO           80    i.UpdateFromAppBkp  update.o
+    0x000005e8   0x0000004c   Code   RO           81    i.Upgrade_FlashCheck  update.o
+    0x00000634   0x0000000e   Code   RO          569    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00000642   0x00000002   Code   RO          570    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00000644   0x0000000e   Code   RO          571    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00000652   0x00000002   PAD
+    0x00000654   0x00000064   Code   RO            3    i.main              main.o
+    0x000006b8   0x00000008   Data   RO          447    .constdata          flash.o
+    0x000006c0   0x00000020   Data   RO          567    Region$$Table       anon$$obj.o
+    0x000006e0   0x000008e0   PAD
+    0x00000fc0   0x00000004   Code   RO          535    .ARM.__at_0x0FC0    startup_ht502x.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001408, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000008   Data   RW           83    .data               update.o
+    0x20000008   0x00000400   Zero   RW           82    .bss                update.o
+    0x20000408   0x00001000   Zero   RW          532    STACK               startup_ht502x.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       212         50          8          0          0       2698   flash.o
+       784        186          0          0          0      14518   ht60xx_it.o
+       100         18          0          0          0       6795   main.o
+        32         12        192          0       4096        776   startup_ht502x.o
+         2          0          0          0          0        413   system_ht6xxx.o
+       256         20          0          8       1024       2052   update.o
+
+    ----------------------------------------------------------------------
+      1388        286       2504          8       5120      27252   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0       2272          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0         60   memcpya.o
+        20          0          0          0          0         60   uread4.o
+
+    ----------------------------------------------------------------------
+       144         16          0          0          0        188   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       142         16          0          0          0        188   mc_p.l
+
+    ----------------------------------------------------------------------
+       144         16          0          0          0        188   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1532        302       2504          8       5120      25832   Grand Totals
+      1532        302       2504          8       5120      25832   ELF Image Totals
+      1532        302       2504          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 4036 (   3.94kB)
+    Total RW  Size (RW Data + ZI Data)              5128 (   5.01kB)
+    Total ROM Size (Code + RO Data + RW Data)       4044 (   3.95kB)
+
+==============================================================================
+

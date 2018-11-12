@@ -1,0 +1,1 @@
+..\..\..\..\..\tool\hex2bin.exe  ..\..\..\..\..\..\output\AAA_uCOS-II.hex
